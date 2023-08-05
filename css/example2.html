@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 2</title>
+    <style>
+        .inp {
+            border: 1px solid black;
+            padding: 10px;
+            display: block;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        /* attr that contains */
+        [href*=".com"]{
+            color: red;
+            background-color: yellow;
+        }
+        /* attr that ends with */
+        [href$=".org"]{
+            color: blue;
+            background-color: yellow;
+        }
+        /* attr that starts with */
+        [href^="https"]{
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <input class="inp" type="text" name="username" placeholder="Username">
+            <input class="inp" type="text" name="city" placeholder="city">
+            <input class="inp" type="text" name="country" placeholder="country">
+            <input class="inp" type="email" name="email" placeholder="email">
+            <input class="inp" type="password" name="password" placeholder="password">
+            <input class="inp" type="password" name="cpassword" placeholder="confirm password">
+            <label>
+                <input type="checkbox"> I agree to the terms and conditions
+            </label>
+            <input type="submit" name="submit" value="submit">
+        </form>
+    </div>
+    <div>
+        <ul>
+            <li><a href="google.com" target="blank">Google</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://twitter.com">Twitter</a></li>
+            <li><a href="http://www.linked.com">LinkedIn</a></li>
+            <li><a href="wikipedia.org">Wikipedia</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

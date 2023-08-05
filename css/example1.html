@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            color: red;
+            font-style: oblique;
+        }
+
+        #header {
+            color: blue;
+            font-style: italic;
+        }
+
+        .item {
+            color: rgb(248, 78, 5);
+            font-style: normal;
+        }
+
+        .subitem {
+            color: rgb(189, 98, 7);
+            font-style: normal;
+            border: 1px solid black;
+        }
+
+        .subitem:hover {
+            color: rgb(40, 43, 37);
+        }
+    </style>
+    <h3 id="header">Selectors</h3>
+    <ul>
+        <li class="item">
+            Tag Selector
+            <ul class="subitem">
+                <li>p { }</li>
+                <li>h1{ }</li>
+                <li>a { }</li>
+            </ul>
+        </li>
+        <li class="item">
+            ID Selector
+            <ul class="subitem">
+                <li>#menu { }</li>
+                <li>#header { }</li>
+                <li>#footer { }</li>
+            </ul>
+        </li>
+        <li class="item">
+            Class Selector
+            <ul class="subitem">
+                <li>.menu { }</li>
+                <li>.header { }</li>
+                <li>.footer { }</li>
+            </ul>
+        </li>
+        <li>
+            Pseudo Class Selector
+            <ul class="subitem">
+                <li>a:hover { }</li>
+                <li>a:active { }</li>
+                <li>a:visited { }</li>
+            </ul>
+        </li>
+        <li>
+            Universal Selector
+            <ul class="subitem">
+                <li>*{ }</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
