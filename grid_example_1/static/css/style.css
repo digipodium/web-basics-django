@@ -1,9 +1,9 @@
 /* variables */
 :root{
-    --header-bg-color: #1b3457;
+    --header-bg-color: #0e2245;
     --header-color: #fff;
-    --card-bg-color: #eff2f4;
-    --card-text-color: #122a4f;
+    --card-bg-color: #c7d9e4;
+    --card-text-color: #0c1624;
     --pad-normal: .75rem;
 }
 *{
@@ -33,20 +33,17 @@ main{
     background-color: var(--card-bg-color);
     color: var(--card-text-color);
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(8, 1, 1, 0.4);
+    box-shadow: 0 0 10px rgba(8, 1, 1,.4);
     display: grid;
     grid-template-rows: auto 1fr auto;
-    overflow: hidden;
-    
     /* nested div */
     .thumb{
         width: 100%;
         height: 250px;
-        object-position: top;
         object-fit: cover;
-        border-radius: 15px 15px 0 0; 
+        object-position: top;
+        border-radius: 15px 15px 30px 0; 
         transition: all .5s ease-in-out;
-        /* hide overflow */
     }
     .content{
         display: grid;
@@ -73,7 +70,6 @@ main{
         font-size: 1rem;
         font-weight: bold;
         display: flex;
-        justify-items: flex-end;
         justify-content: space-around;
         padding: var(--pad-normal);
     }
@@ -101,3 +97,4 @@ main{
     }
     
 }
+
