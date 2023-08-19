@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <main>
+        <h1>
+            The Javascript Basics
+        </h1>
+        <div class="container">
+            <div class="box">
+                <a href="">Lorem, ipsum dolor.</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam explicabo eveniet eligendi cum exercitationem porro facere eaque neque accusantium ipsa, laboriosam id eius ad nesciunt ipsum debitis aliquid quos?</p>
+            </div>
+            <div class="box">
+                <a href="">Exercitationem, fuga dolore.</a>
+                <p>Dolores explicabo iste, unde accusantium ratione nisi voluptas ea magnam qui inventore exercitationem, excepturi enim hic quam in ad atque blanditiis numquam culpa eligendi dignissimos fuga non, eaque ipsam? Perspiciatis.</p>
+            </div>
+            <div class="box">
+                <a href="">Error, ullam voluptas.</a>
+                <p>Dignissimos quod porro corrupti perferendis a sed quibusdam amet cupiditate odit. Ullam, nihil magni dicta totam dolorum maiores officia a sequi illo eum accusantium sunt temporibus corrupti consequatur ab reiciendis?</p>
+            </div>
+            <div class="box">
+                <a href="">Molestias, accusamus sequi?</a>
+                <p>Laboriosam est fugit amet cupiditate in, iusto excepturi ad exercitationem aspernatur voluptate impedit voluptas repellendus consequatur quia optio explicabo deleniti odit minus. Unde sapiente adipisci, odit iusto necessitatibus accusantium earum.</p>
+            </div>
+            <div class="box">
+                <a href="">Ad, vel animi!</a>
+                <p>Perferendis, officiis soluta! Fuga vero facere architecto labore natus quidem saepe nulla fugit, dolor sapiente ab earum molestias, dicta similique dolore nobis temporibus sequi ea reprehenderit, quas vel voluptates assumenda?</p>
+            </div>
+            <div class="box">
+                <a href="">Fugit, rerum saepe?</a>
+                <p>Voluptatem animi ipsum nemo, obcaecati excepturi necessitatibus totam quasi ipsa hic laboriosam sequi ab eum molestias ratione corrupti distinctio. Perferendis voluptatibus ea necessitatibus voluptas nihil beatae cupiditate repellat rem architecto!</p>
+            </div>
+            <div class="box">
+                <a href="">Deserunt, iure ut.</a>
+                <p>A asperiores magnam, harum debitis, possimus tenetur sequi ipsam culpa illo eaque officia molestias explicabo blanditiis voluptate incidunt autem magni iste deleniti. Perferendis libero cupiditate odit distinctio error, minus dicta.</p>
+            </div>
+            <div class="box">
+                <a href="">Voluptate, minus laudantium!</a>
+                <p>Unde vel iusto sequi nihil repellat aperiam aut voluptate, beatae deleniti iste culpa? Saepe id debitis ut distinctio quidem aspernatur ab sequi quis. Temporibus molestias nemo reprehenderit, doloribus eaque praesentium.</p>
+            </div>
+            <div class="box">
+                <a href="">Perferendis, quisquam sed.</a>
+                <p>Dolores expedita deleniti optio maxime numquam, vitae ad neque beatae facere, sapiente consectetur fugit eum inventore laborum ullam quasi exercitationem ipsum? Eligendi sed quam itaque nisi tempore eveniet nobis dolorum!</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        console.log("Javascripts Works 🎉")
+        var paragraphs = document.querySelectorAll(".box") // select all the p tags
+        console.log(paragraphs)
+        // all paragraph to red
+        for (var i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].style.color = "red"
+        }
+        // same this as above but using forEach
+        paragraphs.forEach((p)=>{
+            p.style.color = "green"
+        })
+    </script>
+</body>
+</html>
