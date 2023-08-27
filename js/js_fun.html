@@ -1,0 +1,18 @@
+<input type="number" id="num1"><br>
+<input type="number" id="num2"><br>
+<input type="submit" id="submit" onclick="show()"><br>
+<hr>
+<div id="result"></div>
+<hr>
+<script src="fun.js"></script>
+<script>
+    var num1Box = document.querySelector("#num1")
+    var num2Box = document.querySelector("#num2")
+    var result = document.querySelector("#result")
+    function show() {
+        var n1 = parseInt(num1Box.value)
+        var n2 = parseInt(num2Box.value)
+        var ans = add(n1, n2)
+        result.innerHTML = ans
+    }
+</script>
