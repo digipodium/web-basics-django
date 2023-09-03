@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll effect 2</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all .5s ease-in-out;
+        }
+
+        main {
+            height: 1000vh;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            padding: .5rem;
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        /* colors of containers */
+        .container:nth-child(1) {
+            background-color: #f1c40f;
+        }
+
+        .container:nth-child(2) {
+            background-color: #e67e22;
+        }
+
+        .container:nth-child(3) {
+            background-color: #e74c3c;
+        }
+
+        .container:nth-child(4) {
+            background-color: #9b59b6;
+        }
+
+        .container:nth-child(5) {
+            background-color: #3498db;
+        }
+
+        .fade-to-black {
+            background-color: #000 !important;
+            color: #fff;
+            transform: translateX(-99%);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <h1>Lorem.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit dolores explicabo, accusantium eius vel in
+                ipsam nisi et reiciendis fuga laborum ex aperiam quidem tenetur dolorum harum accusamus nam unde.</p>
+            <p>Ullam odio iure beatae officia magnam. Placeat reiciendis assumenda neque esse iste doloremque veniam,
+                quia maxime officiis laboriosam ipsum ea eos eveniet perspiciatis iusto tenetur dolorum vitae enim
+                suscipit itaque?</p>
+        </section>
+        <section class="container">
+            <h1>Repellendus.</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi minima ducimus non harum temporibus
+                placeat omnis, corrupti deleniti voluptatem dolores, error accusamus assumenda illo facere cumque et,
+                quae aspernatur nisi.</p>
+            <p>Vel voluptate ratione adipisci ipsam, necessitatibus omnis voluptatem non voluptatum delectus quae, alias
+                provident odio magni consectetur inventore fugiat, culpa laudantium rem libero unde! Incidunt, quo ab!
+                Neque, temporibus laborum.</p>
+        </section>
+        <section class="container">
+            <h1>In.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi deleniti aperiam fuga distinctio,
+                delectus nihil obcaecati harum sint quasi. Quod nulla iste voluptas quam eveniet necessitatibus itaque
+                magnam atque assumenda?</p>
+            <p>Debitis culpa explicabo corrupti, eos magnam amet consectetur quos tenetur quas ipsam cupiditate modi cum
+                beatae, autem deleniti quae dolor saepe nihil sed perferendis eveniet nisi. Pariatur ab nulla modi.</p>
+        </section>
+        <section class="container">
+            <h1>Et?</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos cum animi corporis voluptatum illo
+                aspernatur dignissimos iste, officiis ipsa repellat, molestiae quisquam! Nisi consequuntur deleniti quos
+                dolores laborum, enim consectetur.</p>
+            <p>Atque voluptate accusamus totam esse voluptatum laboriosam aliquid fugit odit minima. Animi ullam odio
+                tempore accusantium eius, nemo veniam numquam illo temporibus, vitae beatae voluptas soluta esse dolores
+                dolorum corporis.</p>
+        </section>
+        <section class="container">
+            <h1>Eum.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illum dolores neque est, quod rem ullam
+                aperiam! Natus aut dolorum ducimus reprehenderit maiores consequuntur, quis quae, debitis quia, iste
+                magnam.</p>
+            <p>Officiis maiores esse fugit, accusamus facilis nam omnis? Nemo, reiciendis enim. Deleniti error
+                consequuntur repellendus asperiores, consectetur provident sapiente perferendis molestias eligendi
+                placeat quas commodi odit repudiandae id eum iure!</p>
+        </section>
+    </main>
+    <script>
+        var controller = new ScrollMagic.Controller();
+        var indexes = [1, 2, 3, 4, 5]
+        indexes.forEach(function (index) {
+            var scene = new ScrollMagic.Scene({
+                triggerElement: `.container:nth-child(${index})`,
+                duration: '10%',
+                triggerHook:0,
+            }).setClassToggle(`.container:nth-child(${index})`, 'fade-to-black')
+            .addIndicators({ name: `Slide ${index}` })
+            controller.addScene([scene])
+        })
+
+    </script>
+</body>
+
+</html>
