@@ -26,6 +26,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            border-radius: 50%;
+            /* polaroid like border */
+            border: 10rem solid #fff;
         }
 
         h1 {
@@ -62,67 +65,51 @@
         .fade-to-black {
             background-color: #000 !important;
             color: #fff;
-            transform: translateX(-99%);
+            border-radius: 0;
         }
     </style>
 </head>
 
 <body>
     <main>
-        <section class="container">
-            <h1>Lorem.</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit dolores explicabo, accusantium eius vel in
-                ipsam nisi et reiciendis fuga laborum ex aperiam quidem tenetur dolorum harum accusamus nam unde.</p>
-            <p>Ullam odio iure beatae officia magnam. Placeat reiciendis assumenda neque esse iste doloremque veniam,
-                quia maxime officiis laboriosam ipsum ea eos eveniet perspiciatis iusto tenetur dolorum vitae enim
-                suscipit itaque?</p>
+        <section class="container fade-to-black">
+            <h1>Lorem, ipsum.</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, voluptatem.</p>
+            <p>Itaque corrupti illo nisi repudiandae, tenetur animi necessitatibus obcaecati at?</p>
         </section>
-        <section class="container">
-            <h1>Repellendus.</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi minima ducimus non harum temporibus
-                placeat omnis, corrupti deleniti voluptatem dolores, error accusamus assumenda illo facere cumque et,
-                quae aspernatur nisi.</p>
-            <p>Vel voluptate ratione adipisci ipsam, necessitatibus omnis voluptatem non voluptatum delectus quae, alias
-                provident odio magni consectetur inventore fugiat, culpa laudantium rem libero unde! Incidunt, quo ab!
-                Neque, temporibus laborum.</p>
+        <section class="container fade-to-black">
+            <h1>Soluta, modi?</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, totam.</p>
+            <p>Itaque non culpa nemo in ea! Tempore dicta aut perferendis!</p>
         </section>
-        <section class="container">
-            <h1>In.</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi deleniti aperiam fuga distinctio,
-                delectus nihil obcaecati harum sint quasi. Quod nulla iste voluptas quam eveniet necessitatibus itaque
-                magnam atque assumenda?</p>
-            <p>Debitis culpa explicabo corrupti, eos magnam amet consectetur quos tenetur quas ipsam cupiditate modi cum
-                beatae, autem deleniti quae dolor saepe nihil sed perferendis eveniet nisi. Pariatur ab nulla modi.</p>
+        <section class="container fade-to-black">
+            <h1>Debitis, assumenda?</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, ab.</p>
+            <p>Qui, minima a? Deserunt modi fugit aperiam nihil at dolorem?</p>
         </section>
-        <section class="container">
-            <h1>Et?</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos cum animi corporis voluptatum illo
-                aspernatur dignissimos iste, officiis ipsa repellat, molestiae quisquam! Nisi consequuntur deleniti quos
-                dolores laborum, enim consectetur.</p>
-            <p>Atque voluptate accusamus totam esse voluptatum laboriosam aliquid fugit odit minima. Animi ullam odio
-                tempore accusantium eius, nemo veniam numquam illo temporibus, vitae beatae voluptas soluta esse dolores
-                dolorum corporis.</p>
+        <section class="container fade-to-black">
+            <h1>Vitae, ullam?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, eos.</p>
+            <p>Debitis ratione nostrum ullam sapiente vel recusandae placeat, reiciendis quo!</p>
         </section>
-        <section class="container">
-            <h1>Eum.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illum dolores neque est, quod rem ullam
-                aperiam! Natus aut dolorum ducimus reprehenderit maiores consequuntur, quis quae, debitis quia, iste
-                magnam.</p>
-            <p>Officiis maiores esse fugit, accusamus facilis nam omnis? Nemo, reiciendis enim. Deleniti error
-                consequuntur repellendus asperiores, consectetur provident sapiente perferendis molestias eligendi
-                placeat quas commodi odit repudiandae id eum iure!</p>
+        <section class="container fade-to-black">
+            <h1>Accusantium, laudantium.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, suscipit.</p>
+            <p>Saepe necessitatibus sapiente quam aut aperiam. Molestias facere tenetur quos?</p>
         </section>
     </main>
     <script>
         var controller = new ScrollMagic.Controller();
-        var indexes = [1, 2, 3, 4, 5]
-        indexes.forEach(function (index) {
+        var indexes = document.querySelectorAll('.container');
+        indexes.forEach(function (elem, index) {
+            console.log(index)
             var scene = new ScrollMagic.Scene({
                 triggerElement: `.container:nth-child(${index})`,
                 duration: '10%',
-                triggerHook:0,
+                triggerHook: 0.2,
+                offset: 20,
             }).setClassToggle(`.container:nth-child(${index})`, 'fade-to-black')
-            .addIndicators({ name: `Slide ${index}` })
+                .addIndicators({ name: `Slide ${index}` })
             controller.addScene([scene])
         })
 
